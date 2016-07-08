@@ -1,0 +1,98 @@
+/**
+ * Chef theme for reveal.js.
+ * Author: Michael Goetz
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,400italic,700italic);
+
+
+/**
+ * Chef colors by Michael Goetz
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+.reveal img.unstyled {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal small.middle * {
+  vertical-align: middle;
+}
+
+.blue {
+  color: #53C6E2; }
+
+.green {
+  color: #71C5AF; }
+
+.yellow {
+  color: #FDB714; }
+
+.gold {
+  color: #F18B21; }
+
+.dgray {
+  color: #435464; }
+
+.gray {
+  color: #7D868C; }
+
+.black {
+  color: #000000; }
+
+// Chef colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #3e4346;
+$base00:    #ffffff;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #7d868c;
+$yellow:    #fdb714;
+$orange:    #f18b21;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #3f5364;
+$cyan:      #2aa198;
+$green:     #5ab7b2;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base00;
+$headingColor: $blue;
+$headingTextShadow: none;
+$backgroundColor: $base3;
+$linkColor: $orange;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+$mainFont: 'Montserrat', sans-serif;
+$headingFont: 'Montserrat', Impact, sans-serif;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+@mixin bodyBackground() {
+	background-image: url("../../images/chef_logo.png");
+	background-size: 5%;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
